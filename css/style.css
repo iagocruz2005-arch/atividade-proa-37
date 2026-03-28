@@ -26,20 +26,23 @@ body {
   border: 1px solid #333;
 }
 
+/* 1. Ajuste o container para não cortar a imagem */
 .product-card .main-images {
   position: relative;
-  height: 210px;
+  height: 200px; /* Reduzi um pouco para dar respiro */
+  z-index: 10;
 }
 
+/* 2. Corrija a imagem */
 .product-card .main-images img {
   position: absolute;
-  height: 250px;
-  width: 300px;
-  object-fit: cover;
-  left: -20px;
-  top: -40px;
-  transform: rotate(-30deg);
-  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));
+  height: auto;      /* Deixe a altura automática */
+  width: 110%;       /* Aumente um pouco a largura para o efeito de sair do card */
+  object-fit: contain; /* ESSENCIAL: Garante que a imagem apareça inteira sem cortes */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -60%) rotate(-25deg); /* Centraliza e rotaciona melhor */
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.8)); /* Sombra mais realista no preto */
 }
 
 .product-card .shoe-details .shoe_name {
