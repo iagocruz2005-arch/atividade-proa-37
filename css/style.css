@@ -32,13 +32,12 @@ body {
 }
 
 .product-card .main-images img {
-  position: absolute;
+  position: center;
   height: 250px;
   width: 300px;
   object-fit: cover;
   left: -20px;
   top: -40px;
-  transform: rotate(-30deg);
   filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));
 }
 
